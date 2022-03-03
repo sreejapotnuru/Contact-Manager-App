@@ -24,6 +24,8 @@ STEPS TO ENABLE MIGRATIONS IN PACKAGE MANAGER CONSOLE
 3.Update-Database
 
 TO RUN APPLICATION
+
+
 1.Open Solution in Visual Studio 2019.
 
 2.Go to Build - > Build Application
