@@ -1,0 +1,54 @@
+﻿@model ContactsApplication.Models.ContactViewModel
+
+@{
+    ViewBag.Title = "Index";
+}
+<center>
+    <h2>Contact Form and Contact List Page</h2>
+    <br /><br />
+    @using (Html.BeginForm("Index", "Account", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+        <h2>Add Contacts</h2>
+        <br />
+        <div class="form-group">
+            <label>Name</label>
+            @Html.TextBoxFor(m => m.contact.Name)
+            <br /><br />
+            <label>Ph No</label>
+            @Html.TextBoxFor(m => m.contact.PhNo)
+            <br /><br />
+            <label>Email</label>
+            @Html.TextBoxFor(m => m.contact.Email)
+            <br /><br />
+                  <div class="col-md-offset-2 col-md-10">
+                      <input type="submit" value="Save" class="btn btn-default" style=" background: blue;" />
+                      <br /><br />
+                  </div>
+        </div>
+        <h2>My Contacts</h2>
+        <br />
+        <div>
+            <table class="table">
+                @if (Model.LContacts != null && Model.LContacts.Any())
+                {
+                    <tr style="background:grey;">
+                        <th>Name</th>
+                        <th>Ph No</th>
+                        <th>Email</th>
+                    </tr>
+                    foreach (var contact in Model.LContacts)
+                    {
+
+                        <tr>
+                            <td>@contact.Name</td>
+                            <td>@contact.PhNo</td>
+                            <td>@contact.Email</td>
+                        </tr>
+
+                    }
+                }
+            </table>
+        </div>
+    }
+</center>
