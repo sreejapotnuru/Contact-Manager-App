@@ -24,17 +24,18 @@ STEPS TO ENABLE MIGRATIONS IN PACKAGE MANAGER CONSOLE
 3.Update-Database
 
 TO RUN APPLICATION
+1.Open Solution in Visual Studio 2019.
 
-1.Go to Build - > Build Application
+2.Go to Build - > Build Application
 
-2. Select the IIS Express button in toolbar, to build and run the app in debug mode.
+3. Select the IIS Express button in toolbar, to build and run the app in debug mode.
 Alternatively, press F5, or go to Debug > Start Debugging from the menu bar.
 
 Select IIS Express or press Ctrl+F5 to run the app and open it in a web browser.
 
-3. In the web browser, you'll see Contacts Application.
+4. In the web browser, you'll see Contacts Application.
 
-4. Close the web browser, press Shift+F5 to stop debugging
+5. Close the web browser, press Shift+F5 to stop debugging
 
 
 SOLUTION VIEW
